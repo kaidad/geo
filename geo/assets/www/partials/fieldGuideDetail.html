@@ -1,0 +1,42 @@
+<div class="kaidad-page-container" ng-controller="BundleDetailCtrl">
+    <div class="kaidad-home-header">
+        <ng-include src="'partials/header.html'"
+                    onload="showNavToLocation=false"></ng-include>
+    </div>
+    <div class="kaidad-page-body">
+        <div id="wrapper" class="full-page" ng-iscroll='wrapper'
+             ng-iscroll-delay='50' watch-object='bundle'>
+            <div id="scroller">
+                <div class="kaidad-bundle-detail__title">
+                    <span>{{bundle.title}}</span>
+                </div>
+                <div class="kaidad-bundle-detail__desc">
+                    <span class="icon-pad">{{bundle.description}}</span>
+                </div>
+
+                <div ng-repeat="feature in bundle.features | filter:{ geometry.type: 'Point' }">
+                    <!--<div ng-show="$index > 0" class="kaidad-bundle-detail__feature-separator"></div>-->
+
+                    <div class="kaidad-bundle-detail__feature-item">
+                        <div class="kaidad-bundle-detail__feature-title">
+                                    <span>
+                                        <a class="topcoat-icon-button--quiet"
+                                           ng-click="slidePage('/mapView/' + feature.properties.detailMapDatabase + '/bundle/' + bundle.id + '/feature/' + feature.id)">
+                                            <i class="icon-globe"></i>
+                                        </a>
+                                    </span>
+                            <span>{{feature.properties.title}}</span>
+                        </div>
+                        <div class="kaidad-bundle-detail__feature-description">
+                            {{feature.properties.description}}
+                        </div>
+                        <media-items ng-repeat="item in feature.properties.mediaItems"
+                                     item="item"></media-items>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'partials/footer.html'"></ng-include>
+</div>
+<ng-include src="'partials/settingsOverlay.html'"></ng-include>

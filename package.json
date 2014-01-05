@@ -1,0 +1,26 @@
+{
+  "name": "kaidad",
+  "preferGlobal": true,
+  "version": "0.3.0",
+  "author": "David Winterbourne <dave.winterbourne+kaidad@gmail.com>",
+  "description": "Kaidad Geo - Field Trips!",
+  "contributors": [ 
+    {
+      "name": "David Winterbourne",
+      "email": "dave.winterbourne+kaidad@gmail.com"
+    } 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaidad"
+  },
+  "dependencies" : {
+    "should"   :  "1.2.2",
+    "sinon"   :  "1.7.3"
+  },
+  "analyze": false,
+  "engines": {
+    "node": ">=0.6"
+  }
+}
+

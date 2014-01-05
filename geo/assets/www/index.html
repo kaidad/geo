@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+
+        <!-- Use the .min version of bootstrap files in production -->
+        <!-- Use the following if you want to use responsive design -->
+        <link rel='stylesheet' type="text/css" href='css/font-awesome.css'/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/mobile-nav.css" />
+        <link rel="stylesheet" type="text/css" href="css/kaidad-topcoat-mobile-dark.css">
+        <link rel='stylesheet' type="text/css" href='lib/leaflet.css'/>
+        <link rel='stylesheet' type="text/css" href='lib/leaflet.usermarker.css'/>
+
+        <title>Kaidad Geo</title>
+    </head>
+    
+    <body>
+        <!-- The following tag is in place of ng-view to use the angular mobile view navigation framework
+            https://github.com/ajoslin/angular-mobile-nav
+        -->
+        <mobile-view/>
+
+        <!-- In production use min versions -->
+
+        <!--<script type='text/javascript' src="lib/cordova-2.9.0.js"></script>-->
+        <script type='text/javascript' src="lib/angular.js"></script>
+        <script type='text/javascript' src="lib/zepto.js"></script>
+
+        <!-- seed test data -->
+        <script type="text/javascript" src="js/test-data.js"></script>
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type='text/javascript' src="lib/angular-mobile.js"></script>
+        <script type='text/javascript' src="lib/mobile-nav.js"></script>
+        <script type='text/javascript' src="lib/iscroll.js"></script>
+
+        <script type='text/javascript' src='lib/leaflet.js'></script>
+        <script type='text/javascript' src='lib/leaflet.usermarker.js'></script>
+        <script type='text/javascript' src='lib/TileLayer.MBTiles.js'></script>
+        <script type='text/javascript' src='lib/ZipPlugin.js'></script>
+        <script type='text/javascript' src='lib/angular-audio-player.js'></script>
+        <script type='text/javascript' src='lib/helpers.js'></script>
+
+        <script type='text/javascript' src="js/app.js"></script>
+
+        <script type='text/javascript' src="js/routes.js"></script>
+
+        <script type='text/javascript' src="js/controllers.js"></script>
+
+        <script type='text/javascript' src="js/filters.js"></script>
+
+        <script type='text/javascript' src="js/version-directive.js"></script>
+        <script type='text/javascript' src="js/media-items-directive.js"></script>
+        <script type='text/javascript' src="js/leaflet-popup-directive.js"></script>
+        <script type='text/javascript' src="js/button-hover-directive.js"></script>
+        <script type='text/javascript' src="js/ng-iscroll.js"></script>
+        <script type='text/javascript' src="js/angular-leaflet-directive.js"></script>
+
+        <script type='text/javascript' src="js/services.js"></script>
+        <script type='text/javascript' src="js/map-service.js"></script>
+        <script type='text/javascript' src="js/bundles-service.js"></script>
+        <script type='text/javascript' src="js/feature-viewer-service.js"></script>
+        <script type='text/javascript' src="js/geolocation-service.js"></script>
+
+        <script type='text/javascript' src="js/location-utilities.js"></script>
+
+        <!-- weinre -->
+        <!--<script src="http://192.168.0.6:8080/target/target-script-min.js#anonymous"></script>-->
+
+        <script type="text/javascript">
+            console.log('calling app.initialize()');
+            app.initialize();
+        </script>
+    </body>
+</html>

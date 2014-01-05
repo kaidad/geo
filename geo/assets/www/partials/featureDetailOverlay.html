@@ -1,0 +1,30 @@
+<div class="kaidad-feature-detail-overlay-bg" ng-show="showFeatureDetail"></div>
+<div ng-show="showFeatureDetail" class="kaidad-feature-detail-overlay" ng-controller="FeatureDetailCtrl">
+    <a class="kaidad-overlay-close-button" ng-click="closeOverlay(eventToEmit)"></a>
+
+    <div id="wrapper" ng-iscroll="wrapper" ng-iscroll-delay='50' watch-object="featureToShow.scroller">
+        <div id="scroller">
+            <div class="kaidad-bundle-detail__feature-title"><span class="icon-pad">{{featureToShow.feature.properties.title}}</span>
+            </div>
+            <div class="kaidad-bundle-detail__feature-description"><span class="icon-pad">{{featureToShow.feature.properties.description}}</span>
+            </div>
+            <div class="kaidad-bundle-detail__feature-item">
+                <div class="kaidad-bundle-detail__feature-item-narration"
+                     ng-show="featureToShow.feature.properties.narration">
+                    <div class="kaidad-feature-narration">
+                        <audio autoplay="autoplay" data-player-control="narrationAudio"
+                               data-playlist="narrationAudioPlaylist" audio-player>
+                        </audio>
+                        <span class="kaidad-play-button" ng-click="playPause()">
+                            <i class="icon-play" ng-show="!narrationAudio.playing" ></i>
+                            <i class="icon-pause" ng-show="narrationAudio.playing"></i>
+                        </span>
+                    </div>
+                </div>
+                <media-items ng-repeat="item in featureToShow.feature.properties.mediaItems"
+                             item="item"></media-items>
+            </div>
+        </div>
+    </div>
+
+</div>

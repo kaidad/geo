@@ -1,0 +1,18 @@
+{
+    "id": 400,
+    "title": "canyonlands-hwy313",
+    "description": "Canyonlands along Hwy 313",
+    "type": "FeatureCollection",
+    "features": [
+        {   "id": 401,
+            "type": "Feature",
+            "geometry": {"type": "Point", "coordinates": [-109.685783, 38.669336]},
+            "properties": {
+                "isStart": true,
+                "showMarker": true,
+                "title": "starting point",
+                "description": "starting point"
+            }
+        }
+    ]
+}

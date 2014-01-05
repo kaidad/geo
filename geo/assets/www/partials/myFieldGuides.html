@@ -1,0 +1,30 @@
+<div class="kaidad-page-container">
+    <div class="kaidad-home-header">
+        <ng-include src="'partials/header.html'" onload="showNavToLocation=false"></ng-include>
+    </div>
+    <div class="kaidad-page-body" ng-controller="ListBundlesCtrl">
+        <div id="wrapper" class="full-page" ng-iscroll='wrapper'
+             ng-iscroll-delay='50' watch-object='bundle'>
+            <ul class="topcoat-list">
+                <li class="topcoat-list__item no-pad" ng-repeat="bundle in bundles | orderBy:'title'">
+                    <div class="kaidad-button-group">
+                        <a class="kaidad-button left three-quarters" ng-class="{'is-disabled': !bundle.loaded}"
+                           ng-click="slidePage('/fieldGuideDetail/{{bundle.id}}')">
+                            <i class="icon-book"><span class="icon-pad">{{bundle.title}}</span></i>
+                        </a>
+                        <a ng-hide="isPlainBrowser" class="kaidad-button--right" ng-class="{'is-disabled': !bundle.loaded || showBusy }"
+                             ng-click="removeBundle(bundle)">
+                            <i class="icon-trash"></i>
+                        </a>
+                        <a ng-hide="isPlainBrowser" class="kaidad-button--right" ng-class="{'is-disabled': bundle.loaded || showBusy}"
+                           ng-click="reloadBundle(bundle)">
+                            <i class="icon-refresh"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ng-include src="'partials/footer.html'"></ng-include>
+</div>
+<ng-include src="'partials/settingsOverlay.html'"></ng-include>

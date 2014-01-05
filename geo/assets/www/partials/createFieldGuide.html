@@ -1,0 +1,14 @@
+<div class="kaidad-page-container">
+    <ng-include src="'partials/header.html'" onload="showNavToLocation=false"></ng-include>
+    <div class="kaidad-page-body">
+        <div class="kaidad-bundle-detail__container">
+            <form name="newFieldGuideForm" ng-controller="CreateFieldGuideCtrl"/>
+                <div><label>Title: </label><br/><input type="text" ng-model="fieldGuide.title" required></div>
+                <div><label>Description: </label><br/><textarea cols="60" rows="10" ng-model="fieldGuide.description" required></textarea></div>
+                <div><input type="submit" value="Create!" ng-click="createFieldGuide()"/></div>
+            </form>
+        </div>
+    </div>
+    <ng-include src="'partials/footer.html'"></ng-include>
+</div>
+<ng-include src="'partials/settingsOverlay.html'"></ng-include>

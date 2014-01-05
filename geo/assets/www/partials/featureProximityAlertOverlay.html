@@ -1,0 +1,14 @@
+<div class="kaidad-feature-detail-overlay-bg" ng-show="showFeatureProximityAlert"></div>
+<div ng-show="showFeatureProximityAlert" class="kaidad-feature-detail-overlay"
+     ng-controller="FeatureProximityAlertCtrl">
+    <a class="kaidad-overlay-close-button" ng-click="closeOverlay()"></a>
+
+    <div class="kaidad-overlay-message">
+        <span>You are near:</span>
+        <p ng-repeat="match in featureViewer.featuresToViewStack">{{match.bundle.title}} - {{match.feature.properties.title}}</p>
+    </div>
+    <a class="kaidad-overlay-button--quiet"
+       ng-click="slidePage('/mapView/' + featureViewer.featuresToViewStack[0].feature.properties.detailMapDatabase)">
+        <i class="icon-globe"> Click here to see on map!</i>
+    </a>
+</div>

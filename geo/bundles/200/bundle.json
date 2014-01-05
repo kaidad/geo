@@ -1,0 +1,18 @@
+{
+    "id": 200,
+    "title": "durango-ouray",
+    "description": "Durango to Ouray over Million Dollar Highway",
+    "type": "FeatureCollection",
+    "features": [
+        {   "id": 201,
+            "type": "Feature",
+            "geometry": {"type": "Point", "coordinates": [-107.885399, 37.269041]},
+            "properties": {
+                "isStart": true,
+                "showMarker": true,
+                "title": "starting point",
+                "description": "starting point"
+            }
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<div class="kaidad-bundle-detail__feature-map-popup-body">
+    <div class="kaidad-bundle-detail__feature-title">{{featureToShow.feature.properties.title}}</div>
+    <div class="kaidad-bundle-detail__feature-description">{{featureToShow.feature.properties.description}}</div>
+    <div class="kaidad-bundle-detail__feature-item">
+        <media-items ng-repeat="item in featureToShow.feature.properties.mediaItems"
+                     item="item"></media-items>
+    </div>
+</div>

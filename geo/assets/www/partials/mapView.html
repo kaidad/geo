@@ -1,0 +1,9 @@
+<ng-include src="'partials/header.html'" onload="showNavToLocation=true"></ng-include>
+
+<div ng-controller="MapCtrl">
+    <leaflet id="map" class="map" maxBounds="maxBounds" defaults="defaults" center="center" marker="marker"></leaflet>
+</div>
+
+<div ng-include="'partials/featureDetailOverlay.html'"></div>
+
+<div ng-include="'partials/settingsOverlay.html'"></div>

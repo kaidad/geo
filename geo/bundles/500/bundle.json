@@ -1,0 +1,18 @@
+{
+    "id": 500,
+    "title": "hwy276-halls-crossing",
+    "description": "Hwy 276 across Hall's Crossing",
+    "type": "FeatureCollection",
+    "features": [
+        {   "id": 501,
+            "type": "Feature",
+            "geometry": {"type": "Point", "coordinates": [-110.569496, 38.023120]},
+            "properties": {
+                "isStart": true,
+                "showMarker": true,
+                "title": "starting point",
+                "description": "starting point"
+            }
+        }
+    ]
+}

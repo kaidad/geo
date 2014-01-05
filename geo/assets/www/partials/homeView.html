@@ -1,0 +1,21 @@
+<div class="kaidad-page-container">
+    <ng-include src="'partials/header.html'" onload="showNavToLocation=false"></ng-include>
+    <div class="kaidad-page-body">
+        <ul class="topcoat-list">
+            <li class="topcoat-list__item--first no-pad">
+                <a class="kaidad-button left full" ng-click="slidePage('/myFieldGuides')"><i class="icon-book"><span class="icon-pad">My field guides</span></i></a>
+            </li>
+            <li class="topcoat-list__item no-pad">
+                <a class="kaidad-button left full" ng-click="slidePage('/searchFieldGuides')"><i class="icon-search"><span class="icon-pad">Search for field guides</span></i></a>
+            </li>
+            <li class="topcoat-list__item no-pad">
+                <a class="kaidad-button left full" ng-click="slidePage('/createFieldGuide')"><i class="icon-wrench"><span class="icon-pad">Create field guide</span></i></a>
+            </li>
+            <li class="topcoat-list__item no-pad">
+                <a class="kaidad-button left full" ng-click="slidePage('/mapView/root')"><i class="icon-globe"><span class="icon-pad">Map</span></i></a>
+            </li>
+        </ul>
+    </div>
+    <ng-include src="'partials/footer.html'"></ng-include>
+</div>
+<div ng-include="'partials/settingsOverlay.html'"></div>

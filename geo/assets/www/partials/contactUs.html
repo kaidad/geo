@@ -1,0 +1,13 @@
+<div class="kaidad-page-container">
+    <ng-include src="'partials/header.html'" onload="showNavToLocation=false"></ng-include>
+    <div class="kaidad-page-body">
+        <div class="kaidad-bundle-detail__container">
+            <form name="contactForm" ng-controller="ContactCtrl">
+                <div><label>Comment: </label><br/><textarea cols="60" rows="10" ng-model="contactSubmit.comment" required></textarea></div>
+                <div><label>Your email: </label><br/><input type="email" ng-model="contactSubmit.email" required></div>
+                <div><input type="submit" value="Submit" ng-click="submitFeedback()"/></div>
+            </form>
+        </div>
+    </div>
+</div>
+<ng-include src="'partials/settingsOverlay.html'"></ng-include>

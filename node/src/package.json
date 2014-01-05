@@ -1,0 +1,8 @@
+{
+  "name": "kaidad",
+  "version": "0.0.1",
+  "dependencies": {
+    "sqlite3": "2.1.17",
+    "express": "3.4.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "id": 300,
+    "title": "arches-moab",
+    "description": "arches-moab",
+    "type": "FeatureCollection",
+    "features": [
+        {   "id": 301,
+            "type": "Feature",
+            "geometry": {"type": "Point", "coordinates": [-109.804230, 38.931272]},
+            "properties": {
+                "isStart": true,
+                "showMarker": true,
+                "title": "starting point",
+                "description": "starting point"
+            }
+        }
+    ]
+}
